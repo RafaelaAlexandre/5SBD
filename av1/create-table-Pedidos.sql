@@ -4,7 +4,7 @@ CREATE TABLE Pedidos (
     payments_date DATE,
     buyer_email VARCHAR(255),
     buyer_name VARCHAR(255),
-    cpf VARCHAR(11),
+    cpf VARCHAR(50),
     buyer_phone_number VARCHAR(20),
     ship_service_level VARCHAR(100),
     recipient_name VARCHAR(255),
