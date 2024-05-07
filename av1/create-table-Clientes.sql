@@ -1,6 +1,6 @@
 
 CREATE TABLE Clientes (
-    cpf VARCHAR(11) PRIMARY KEY,
+    cpf VARCHAR(50) PRIMARY KEY,
     buyer_email VARCHAR(255),
     buyer_name VARCHAR(255),
     buyer_phone_number VARCHAR(20),
