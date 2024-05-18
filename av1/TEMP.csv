@@ -1,0 +1,6 @@
+﻿order-id;order-item-id;purchase-date;payments-date;buyer-email;buyer-name;cpf;buyer-phone-number;sku;product-name;quantity-purchased;currency;item-price;ship-service-level;recipient-name;ship-address-1;ship-address-2;ship-address-3;ship-city;ship-state;ship-postal-code;ship-country;ioss-number
+123456789;1;06/05/2024;06/05/2024;johndoe@example.com;John Doe;123.456.789-00;1234567890;SKU004;Finalizador;1;BRL;20.00;Standard;John Doe;Avenida Brasil;;;Rio de Janeiro;Rio de Janeiro;21000-000;Brasil;2345678901
+123456789;2;06/05/2024;06/05/2024;johndoe@example.com;John Doe;123.456.789-00;1234567890;SKU001;Shampoo;2;BRL;10.00;Standard;John Doe;Avenida Brasil;;;Rio de Janeiro;Rio de Janeiro;21000-000;Brasil;2345678901
+987654321;4;06/05/2024;06/05/2024;janedoe@example.com;Jane Doe;987.654.321-00;1987654321;SKU002;Condicionador;4;BRL;15.00;Express;Jane Doe;Rua das Flores;;;São Paulo;São Paulo;01234-567;Brasil;1234567890
+987654321;6;06/05/2024;06/05/2024;janedoe@example.com;Jane Doe;987.654.321-00;1987654321;SKU003;Creme de Pentear;5;BRL;30.00;Express;Jane Doe;Rua das Flores;;;São Paulo;São Paulo;01234-567;Brasil;1234567890
+456789012;8;06/05/2024;06/05/2024;sarahsmith@example.com;Sarah Smith;456.789.012-00;1122334455;SKU003;Creme de Pentear;5;BRL;30.00;Express;Sarah Smith;Avenida dos Ipês;;;Campinas;São Paulo;13000-000;Brasil;6789012345
