@@ -18,22 +18,28 @@ Nessa etapa é criado a tabela Temporaria que receberá contém as informações
 
 Nessa etapa foi criada a estrututa das Tabelas:
 - Pedidos 
+
 |id|dataPedido|dataPagamento|moeda|valorTotal|id_cliente|status|
 |-|-|-|-|-|-|-|
 
 - Produtos
+
 |id|nome|SKU|quantidade_estoque|
 |-|-|-|-|
 - Clientes
+
 |id|nome|email|telefone|cpf|endereco_linha1|endereco_linha2|endereco_linha3|cidade|estado|codigo_postal|pais|
 |-|-|-|-|-|-|-|-|-|-|-|-|
 - ItensPedidos
+
 |id|valor|quantidade|moeda|id_pedido|id_produto|
 |-|-|-|-|-|-|
 - Movimentação de estoque
+
 |id|quantidade|dataMovimentacao|id_pedido|id_produto|Transacao|
 |-|-|-|-|-|-|
 - Compras
+
 |id|quantidade|data_compra|id_produto|id_pedido|
 |-|-|-|-|-|
 
