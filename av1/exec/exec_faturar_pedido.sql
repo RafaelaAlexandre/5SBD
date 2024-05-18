@@ -1,0 +1,1 @@
+EXEC faturar_pedido;
