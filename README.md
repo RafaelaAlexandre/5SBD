@@ -1,39 +1,53 @@
-#  Programação de Scripts de Banco de Dados e SQL
+# Programação de Scripts de Banco de Dados e SQL
 
-Este repositório foi criado para armazenar os projetos desenvolvidos durante a disciplina **Programação de Scripts de Banco de Dados e SQL** do quinto período do curso **Analise e Desenvolvimento de Sistemas** da Faculdade [FAETERJ_RIO](https://www.faeterj-rio.edu.br/). O objetivo principal da disciplina é praticar os principais comandos e funções do SQL disponíveis em Sistemas de Gerenciamento de Banco de Dados (SGBD), bem como construir scripts para estudar e entender na prática esses conceitos.
+Este repositório foi criado para armazenar os projetos desenvolvidos durante a disciplina Programação de Scripts de Banco de Dados e SQL do quinto período do curso Análise e Desenvolvimento de Sistemas da Faculdade FAETERJ_RIO. O objetivo principal da disciplina é praticar os principais comandos e funções do SQL disponíveis em Sistemas de Gerenciamento de Banco de Dados (SGBD), bem como construir scripts para estudar e entender na prática esses conceitos.
 
 ## 🗂️ Estrutura do Repositório
 
-1. **Scripts SQL:** Neste diretório estão os scripts desenvolvidos durante as aulas práticas e atividades da disciplina. Eles cobrem desde comandos básicos até consultas mais complexas e procedimentos armazenados.
+### AV1
 
-2. **Projetos:** Este diretório contém os projetos maiores desenvolvidos ao longo do semestre. Eles podem incluir modelagem de banco de dados, consultas avançadas, procedimentos armazenados e outras práticas mais complexas.
+#### Scripts SQL
+Neste diretório estão os scripts desenvolvidos durante as aulas práticas e atividades da disciplina. Eles cobrem desde comandos básicos até consultas mais complexas e procedimentos armazenados.
 
-3. **Referências Bibliográficas:** Uma lista de referências bibliográficas recomendadas para a disciplina, incluindo obras básicas e complementares que podem auxiliar no estudo e compreensão dos conceitos abordados.
+#### Projetos
+Este diretório contém os projetos maiores desenvolvidos ao longo do semestre. Eles podem incluir modelagem de banco de dados, consultas avançadas, procedimentos armazenados e outras práticas mais complexas.
 
-## 🛠️Ferramentas Utilizadas
+#### Referências Bibliográficas
+Uma lista de referências bibliográficas recomendadas para a disciplina, incluindo obras básicas e complementares que podem auxiliar no estudo e compreensão dos conceitos abordados.
 
-1. **Sql Server 2022**: Para a Criação do banco de dados foi utilizado o[sql server 2020 developer](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads), uma ferramenta da Microsoft disponivel para download gratuido.  
+### AV2
 
-2. **SQL Server Management Studio**: Para a criaçaõ e manipulação de scripts foi o utilizado o [SSMS](https://learn.microsoft.com/pt-PT/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16) também disponível para download gratuito.
+#### Projeto em Python
+Neste diretório, você encontrará um projeto desenvolvido em Python utilizando SQLAlchemy, Flask e SQLite, seguindo a arquitetura MVC. O projeto tem como objetivo processar pedidos vindos de uma segunda API, que também foi escrita em Python e Flask. Ambas as APIs estão localizadas no diretório AV2.
+
+## 🛠️ Ferramentas Utilizadas
+
+### AV1
+- **SQL Server 2022**: Para a criação do banco de dados foi utilizado o SQL Server 2022 Developer, uma ferramenta da Microsoft disponível para download gratuito.
+- **SQL Server Management Studio**: Para a criação e manipulação de scripts foi utilizado o SSMS, também disponível para download gratuito.
+
+### AV2
+- **Python**: Linguagem de programação utilizada para desenvolver a aplicação.
+- **SQLAlchemy**: ORM utilizado para gerenciar o banco de dados SQLite.
+- **Flask**: Framework utilizado para criar as APIs.
+- **SQLite**: Banco de dados utilizado no projeto.
 
 ## 📃 Como Usar
 
 1. **Clonar o Repositório:**
-
-```
-https://github.com/RafaelaAlexandre/5SBD.git
-```
+   ```sh
+   git clone https://github.com/RafaelaAlexandre/5SBD.git
+   ```
 
 2. **Configuração do Ambiente:**
-Certifique-se de ter um Sistema de Gerenciamento de Banco de Dados (SGBD) instalado em sua máquina para executar os scripts SQL e testar os projetos.
+   Certifique-se de ter um Sistema de Gerenciamento de Banco de Dados (SGBD) instalado em sua máquina para executar os scripts SQL e testar os projetos da AV1. Para a AV2, certifique-se de ter Python e os pacotes necessários instalados.
 
 3. **Explorar os Scripts e Projetos:**
-Utilize os scripts SQL fornecidos para praticar os principais comandos e funções do SQL. Explore os projetos desenvolvidos para entender melhor como aplicar esses conceitos em cenários mais complexos.
+   - Utilize os scripts SQL fornecidos na AV1 para praticar os principais comandos e funções do SQL.
+   - Explore os projetos desenvolvidos na AV2 para entender melhor como aplicar esses conceitos em cenários mais complexos utilizando Python, SQLAlchemy e Flask.
 
 4. **Contribuir:**
-Contribua com seus próprios projetos ou melhorias nos existentes, abrindo pull requests ou reportando problemas através das issues.
-
-
+   Contribua com seus próprios projetos ou melhorias nos existentes, abrindo pull requests ou reportando problemas através das issues.
 
 ## 📚 Referências Bibliográficas
 
