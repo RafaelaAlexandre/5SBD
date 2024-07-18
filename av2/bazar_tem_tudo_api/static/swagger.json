@@ -1,0 +1,435 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API documentation for Bazar Tem Tudo",
+    "version": "1.0.0",
+    "title": "Bazar Tem Tudo API"
+  },
+  "host": "localhost:5000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "clientes",
+      "description": "Operations about clientes"
+    },
+    {
+      "name": "produtos",
+      "description": "Operations about produtos"
+    },
+    {
+      "name": "pedidos",
+      "description": "Operations about pedidos"
+    },
+    {
+      "name": "receber_pedidos",
+      "description": "Operations about receber_pedidos"
+    },
+    {
+      "name": "itens",
+      "description": "Operations about itens"
+    },
+    {
+      "name": "processar_pedidos",
+      "description": "Operations about processar_pedidos"
+    },
+    {
+      "name": "compras",
+      "description": "Operations about compras"
+    },
+    {
+      "name": "atualizar_estoques",
+      "description": "Operations about atualizar_estoques"
+    },
+    {
+      "name": "movimentacoes",
+      "description": "Operations about movimentacao"
+    }
+  ],
+  "paths": {
+    "/clientes": {
+      "get": {
+        "tags": [
+          "clientes"
+        ],
+        "summary": "Get all clientes",
+        "responses": {
+          "200": {
+            "description": "A list of clientes",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Cliente"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/produtos": {
+      "get": {
+        "tags": [
+          "produtos"
+        ],
+        "summary": "Get all produtos",
+        "responses": {
+          "200": {
+            "description": "A list of produtos",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Produto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pedidos": {
+      "get": {
+        "tags": [
+          "pedidos"
+        ],
+        "summary": "Get all pedidos",
+        "responses": {
+          "200": {
+            "description": "A list of pedidos",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Pedido"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/itens": {
+      "get": {
+        "tags": [
+          "itens"
+        ],
+        "summary": "Get all itens",
+        "responses": {
+          "200": {
+            "description": "A list of itens",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Item"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/processar_pedidos": {
+      "put": {
+        "tags": [
+          "processar_pedidos"
+        ],
+        "summary": "Processar pedidos pendentes",
+        "responses": {
+          "200": {
+            "description": "Pedidos processados",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/compras": {
+      "get": {
+        "tags": [
+          "compras"
+        ],
+        "summary": "Get all compras",
+        "responses": {
+          "200": {
+            "description": "A list of compras",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Compra"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/atualizar_estoques": {
+      "post": {
+        "tags": [
+          "atualizar_estoques"
+        ],
+        "summary": "Atualizar estoque de produtos",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Dados para atualizar o estoque",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AtualizarEstoqueRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Estoque atualizado",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/movimentacoes": {
+      "get": {
+        "tags": [
+          "movimentacoes"
+        ],
+        "summary": "Get all movimentacao records",
+        "responses": {
+          "200": {
+            "description": "A list of movimentacao records",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Movimentacao"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/receber_pedido": {
+      "post": {
+        "tags": [
+          "receber_pedidos"
+        ],
+        "summary": "Receive new pedidos",
+        "responses": {
+          "201": {
+            "description": "Pedido recebido com sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro ao processar o pedido",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro ao obter pedido da API externa",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Cliente": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "nome_cliente": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "cpf": {
+          "type": "string"
+        },
+        "endereco": {
+          "type": "string"
+        }
+      }
+    },
+    "Produto": {
+      "type": "object",
+      "properties": {
+        "sku": {
+          "type": "string"
+        },
+        "nome_produto": {
+          "type": "string"
+        },
+        "valor_produto": {
+          "type": "number",
+          "format": "float"
+        },
+        "estoque": {
+          "type": "integer"
+        }
+      }
+    },
+    "Pedido": {
+      "type": "object",
+      "properties": {
+        "id_pedido": {
+          "type": "integer"
+        },
+        "valor_total": {
+          "type": "number",
+          "format": "float"
+        },
+        "data_pedido": {
+          "type": "string",
+          "format": "date"
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    },
+    "Item": {
+      "type": "object",
+      "properties": {
+        "id_itens": {
+          "type": "integer"
+        },
+        "valor_itens": {
+          "type": "number",
+          "format": "float"
+        },
+        "quant": {
+          "type": "integer"
+        },
+        "id_pedido": {
+          "type": "integer"
+        },
+        "sku": {
+          "type": "string"
+        }
+      }
+    },
+    "Compra": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "sku": {
+          "type": "string"
+        },
+        "quant": {
+          "type": "integer"
+        }
+      }
+    },
+    "AtualizarEstoqueRequest": {
+      "type": "object",
+      "properties": {
+        "sku": {
+          "type": "string"
+        },
+        "quantidade": {
+          "type": "integer"
+        }
+      }
+    },
+    "Movimentacao": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "tipo": {
+          "type": "string"
+        },
+        "quantidade": {
+          "type": "integer"
+        },
+        "data": {
+          "type": "string",
+          "format": "date"
+        },
+        "sku": {
+          "type": "string"
+        }
+      }
+    },
+    "NovoPedido": {
+      "type": "object",
+      "properties": {
+        "id_pedido": {
+          "type": "integer"
+        },
+        "valor_total": {
+          "type": "number",
+          "format": "float"
+        },
+        "data_pedido": {
+          "type": "string",
+          "format": "date"
+        },
+        "cpf": {
+          "type": "string"
+        },
+        "nome_cliente": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "endereco": {
+          "type": "string"
+        },
+        "itens": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/NovoItemPedido"
+          }
+        }
+      }
+    },
+    "NovoItemPedido": {
+      "type": "object",
+      "properties": {
+        "sku": {
+          "type": "string"
+        },
+        "valor_itens": {
+          "type": "number",
+          "format": "float"
+        },
+        "quant_produto": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}
